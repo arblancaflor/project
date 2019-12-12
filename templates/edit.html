@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <form method="post" action="{{ url_for('edit') }}">
+        <!-- This is the edit form -->
+        <input type="hidden" value="{{ result[0] }}" name="id">
+        Name:<input type="text" value="{{ result[1] }}" name="name"><br>
+        Password:<input type="password" value="{{ result[2] }}" name="password"><br>
+        <button name="edit" value="update" class="btn btn-primary">Submit</button>
+        <button name="edit" value="delete" class="btn btn-danger">Delete</button>
+    </form>
+
+</div>
+{% endblock %}
